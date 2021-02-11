@@ -5,12 +5,17 @@
 <body>
   <h1>Welcome to Meteor!</h1>
 
+  <!-- this renders the template ci-dessous -->
   {{> hello}}
 </body>
 
 <template name="hello">
 
+  <!-- this calls the helper function in main.js -->
   {{#each eleves}}
+  <!-- for every object returned, make a new <p> (paragraph) element
+  	with a inner value equal to each object's name, as defined in the db, and an opacity defined by the opacityChanger helper.
+  	the class "clickable" is what makes the html element interactive -->
     <p class="clickable" style="opacity:{{opacityChanger}}">{{name}}</p>
   {{/each}}
 
