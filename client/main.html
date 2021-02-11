@@ -1,0 +1,17 @@
+<head>
+  <title>workshopLaCambre</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+
+  {{#each eleves}}
+    <p class="clickable" style="opacity:{{opacityChanger}}">{{name}}</p>
+  {{/each}}
+
+</template>
